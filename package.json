@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-db": "npx tsx scripts/setup-db.ts",
+    "seed": "npx tsx scripts/seed.ts",
+    "worker": "npx tsx src/bullMQ/worker.ts",
+    "enqueue": "npx tsx scripts/enqueue.ts",
+    "reset-items": "npx tsx scripts/reset-items.ts"
   },
   "repository": {
     "type": "git",
@@ -13,9 +18,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/mominSimplex/bullMQ/issues"
   },
-  "homepage": "https://github.com/mominSimplex/bullMQ#readme"
+  "homepage": "https://github.com/mominSimplex/bullMQ#readme",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "@types/pg": "^8.11.6",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "bullmq": "^5.70.4",
+    "dotenv": "^16.4.7",
+    "ioredis": "^5.10.0",
+    "pg": "^8.13.1"
+  }
 }
