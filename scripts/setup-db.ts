@@ -2,7 +2,7 @@ import { createTable, close } from "../src/db.js";
 
 async function main() {
   await createTable();
-  console.log('Table "items" ready.');
+  console.log('Table "items" created.');
   await close();
   process.exit(0);
 }

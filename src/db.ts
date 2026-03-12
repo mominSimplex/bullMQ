@@ -60,17 +60,6 @@ export async function processChunk(ids: number[]): Promise<void> {
   );
 }
 
-export async function countItems(status?: string | null): Promise<number> {
-  const clause = status != null ? "WHERE status = $1" : "";
-  const args = status != null ? [status] : [];
-  const result = await pool.query<{ count: string }>(
-    `SELECT COUNT(*) AS count FROM items ${clause}`,
-    args
-  );
-  const row = result.rows[0];
-  return row != null ? parseInt(row.count, 10) : 0;
-}
-
 export async function seed(count: number): Promise<void> {
   const client = await pool.connect();
   try {

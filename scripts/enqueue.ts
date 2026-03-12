@@ -1,4 +1,4 @@
-import { addJob, close } from "../src/bullMQ/producer.js";
+import { addJob, close } from "../src/queue/producer.js";
 
 const failAtChunk =
   process.argv[2] !== undefined ? parseInt(process.argv[2], 10) : null;

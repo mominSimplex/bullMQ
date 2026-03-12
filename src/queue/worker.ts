@@ -29,7 +29,7 @@ async function processJob(job: Job<ProcessChunksData>) {
 
     if (failAtChunk != null && chunkIndex === failAtChunk) {
       console.log(
-        `[${batchId}] Simulating failure at chunk index ${chunkIndex} (ids ${ids[0]}-${nextLastId})`
+        `[${batchId}] failure at chunk index ${chunkIndex} (ids ${ids[0]}-${nextLastId})`
       );
       throw new Error(`Demo failure at chunk ${chunkIndex}`);
     }

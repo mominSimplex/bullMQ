@@ -3,7 +3,7 @@ import express from "express";
 import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter.js";
 import { ExpressAdapter } from "@bull-board/express";
-import queue from "./bullMQ/queue.js";
+import queue from "./queue/queue.js";
 
 const PORT = parseInt(process.env.DASHBOARD_PORT ?? "3000", 10);
 const BASE_PATH = "/admin/queues";
