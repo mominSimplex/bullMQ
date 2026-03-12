@@ -9,7 +9,8 @@
     "seed": "npx tsx scripts/seed.ts",
     "worker": "npx tsx src/bullMQ/worker.ts",
     "enqueue": "npx tsx scripts/enqueue.ts",
-    "reset-items": "npx tsx scripts/reset-items.ts"
+    "reset-items": "npx tsx scripts/reset-items.ts",
+    "dashboard": "npx tsx src/dashboard.ts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/mominSimplex/bullMQ#readme",
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^25.4.0",
     "@types/pg": "^8.11.6",
     "ts-node": "^10.9.2",
@@ -31,8 +33,11 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@bull-board/api": "^5.22.2",
+    "@bull-board/express": "^5.22.2",
     "bullmq": "^5.70.4",
     "dotenv": "^16.4.7",
+    "express": "^4.21.1",
     "ioredis": "^5.10.0",
     "pg": "^8.13.1"
   }
